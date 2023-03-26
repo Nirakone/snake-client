@@ -9,6 +9,10 @@ const connect = function () {
   conn.on("connect", () => {
     // code that does something when the connection is first established
     console.log('Success! Connected!');
+    conn.write("Name: NEO");
+    conn.on("data", (data) =>  {
+      console.log(data);
+    });
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
@@ -19,4 +23,4 @@ const connect = function () {
 console.log("Connecting ...");
 //connect();
 
-module.exports = {connect};  
+module.exports = {connect};
