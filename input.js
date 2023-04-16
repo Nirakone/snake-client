@@ -14,20 +14,19 @@ const setupInput = (conn) => {
     }
     if (key === 'w') {
       conn.write("Move: up");
-    }  
+    }
     if (key === 'a') {
       conn.write("Move: left");
     }
-      if (key === 's') {
+    if (key === 's') {
       conn.write("Move: down");
     }
-      if (key === 'd') {
+    if (key === 'd') {
       conn.write("Move: right");
     }
-      if (key === '1') {
+    if (key === '1') {
       conn.write('Say: Hello!');
     }
-  
     if (key === '2') {
       conn.write('Say: Good Game!');
     }
@@ -35,7 +34,7 @@ const setupInput = (conn) => {
     
   stdin.on("data", handleUserInput);
   return stdin;
-  };
+};
 
 
 module.exports = { setupInput };
